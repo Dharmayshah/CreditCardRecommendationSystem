@@ -1,0 +1,80 @@
+﻿Project: Credit Card Recommendation Chatbot
+Objective
+Build a conversational chatbot that helps a user find the best credit card based on their needs by chatting naturally.
+The chatbot must use a fixed JSON dataset of 50 credit cards and LangChain to interpret user intent, extract preferences, and recommend the most suitable card.
+The goal is clarity of thinking, clean architecture, and correct use of LLMs, not UI polish.
+________________
+
+
+What the Chatbot Should Do
+* Chat with the user in natural language
+* Ask only necessary follow-up questions (income, spend type, preferences, etc.)
+* Understand vague inputs (e.g. “shopping”, “travel”, “low fees”)
+* Filter and rank cards only from the provided JSON
+* Recommend one best card with a short explanation
+* Never hallucinate cards or features outside the dataset
+________________
+
+
+Input Data
+* A single JSON file containing 50 credit cards
+* Each card includes structured fields such as:
+   * Issuer
+   * Fees
+   * Rewards
+   * Interest rate
+   * Eligibility (income / employment)
+   * Card category (shopping, travel, lifestyle, etc.)
+The dataset is the only source of truth.
+________________
+
+
+Technical Requirements
+* Language: Python
+* Framework: LangChain
+* LLM: Any supported model (OpenAI / Gemini / Claude — configurable)
+* No database required (JSON in-memory is sufficient)
+* CLI or simple chat loop is acceptable (no frontend needed)
+________________
+
+
+Suggested Architecture (High Level)
+1. User Message
+2. LLM + Prompt
+   * Extract user preferences into structured fields
+3. Filtering Logic
+   * Match cards from JSON based on extracted preferences
+4. Scoring / Ranking
+   * Simple rule-based or weighted scoring
+5. Final Recommendation
+   * Return one card with reasoning
+________________
+
+
+README.md
+1. Project Overview
+   * What the chatbot does
+   * Problem it solves
+2. How It Works
+   * High-level flow of the system
+3. Tech Stack
+   * LangChain, LLM, Python version
+4. Setup Instructions
+   * Install dependencies
+   * Add API key
+   * Run the chatbot
+5. Design Decisions
+   * How preferences are extracted
+   * How cards are filtered and ranked
+6. Limitations & Improvements
+   * What could be done better with more time
+________________
+
+
+Evaluation Criteria
+Interns will be judged on:
+* Prompt clarity and code
+* Quality of README and explanations
+
+Dataset 
+Data for project.json
