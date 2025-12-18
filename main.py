@@ -22,8 +22,8 @@ class CreditCardChatbot:
     def __init__(self, json_path: str):
         self.cards = self._load_cards(json_path)
         self.llm = ChatCohere(
-            model=os.getenv("MODEL_NAME", "command-r"),
-            cohere_api_key=os.getenv("COHERE_API_KEY", "g6kvDZ9SpVGr1AjMT5sFhqoZEkQ71oIrmArAm1qn"),
+            model=os.getenv("MODEL_NAME"),
+            cohere_api_key=os.getenv("COHERE_API_KEY"),
             temperature=0.3
         )
         self.user_prefs = {}
